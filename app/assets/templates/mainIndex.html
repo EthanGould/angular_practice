@@ -2,5 +2,9 @@
 <div class='search'>
   Find an ape:<input type='text'><button type='submit'>Search</button>
 </div>
-<div id='ape-list'>
+<div id='ape-list' ng-repeat="a in apes">
+  <h2>{{a.species}}</h2>
+  <li>average height: {{a.avg_height}} ft</li>
+  <li>Range/habitat: {{a.origin}}</li>
+  <li>Endangered: {{a.endangered}}</li>
 </div>
