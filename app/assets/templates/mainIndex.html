@@ -1,8 +1,8 @@
 <h1> All Great Apes </h1>
 <div class='search'>
-  Find an ape:<input type='text'><button type='submit'>Search</button>
+  Find an ape:<input ng-model='search' type='text'><button type='submit'>Search</button>
 </div>
-<div id='ape-list' ng-repeat="a in apes">
+<div id='ape-list' ng-repeat="a in apes | filter: search">
   <h2>{{a.species}}</h2>
   <li>average height: {{a.avg_height}} ft</li>
   <li>Range/habitat: {{a.origin}}</li>
